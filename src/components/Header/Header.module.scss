@@ -1,0 +1,41 @@
+.header_wrapper {
+    width: 100%;
+    height: 155px;
+    display: flex;
+    justify-content: center;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 330px);
+
+        .logo {
+            img {
+                width: 200px;
+                cursor: pointer;
+            }
+        }
+
+        .nav_wrapper {
+            ul {
+                width: 370px;
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+
+                li {
+                    list-style-type: none;
+                    cursor: pointer;
+                    letter-spacing: 2px;
+                    line-height: 14px;
+
+                    &:hover {
+                        border-bottom: 1px solid rgb(0, 0, 0);
+                    }
+                }
+
+            }
+        }
+    }
+}
