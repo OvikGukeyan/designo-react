@@ -38,6 +38,10 @@
         // box-shadow: 0 0 3px rgba(255, 173, 155, 1);
     }
 
+    &:active .waves {
+        background-color: #ffffff;
+    }
+
     &:hover .waves {
         top: -50px;
     }

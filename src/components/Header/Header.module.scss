@@ -8,7 +8,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: calc(100% - 330px);
+        width: calc(100% - 300px);
 
         .logo {
             img {
@@ -28,11 +28,30 @@
                     list-style-type: none;
                     cursor: pointer;
                     letter-spacing: 2px;
-                    line-height: 14px;
+                    position: relative;
+                    line-height: 16px;
+                    transition: all .6s;
+                    
+                    &:after {
+                        position: absolute;
+                        content:"";
+                        width: 0;
+                        height: 1px;
+                        background: black;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        transition: all .6s;   
+                      } 
 
                     &:hover {
-                        border-bottom: 1px solid rgb(0, 0, 0);
+                        font-size: 17px;
+                        &:after {
+                            width: 100%; 
+                          }
                     }
+
+                   
                 }
 
             }

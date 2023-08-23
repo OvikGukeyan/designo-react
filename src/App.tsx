@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import './App.css';
-import {Header} from './components';
+import {Footer, Header} from './components';
 import Home from './Pages/Home';
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

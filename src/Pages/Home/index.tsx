@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import { Button } from '../../components';
+import { Button, NavBoard } from '../../components';
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +14,7 @@ const Home: React.FC = () => {
           </div>
           <img src="./assets/home/desktop/image-hero-phone.png" alt="" />
         </div>
+        <NavBoard/>
       </div>
     </div>
   )
