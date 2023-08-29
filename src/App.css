@@ -6,3 +6,9 @@
 * {
     font-family: 'Jost';
 }
+
+.App {
+    background-image: url(../public/assets/shared/desktop/Rectangle.svg);
+    background-repeat: no-repeat;
+    background-position: 0 25%;
+}

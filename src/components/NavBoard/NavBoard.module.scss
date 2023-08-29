@@ -1,8 +1,6 @@
 .nav_board {
     width: 100%;
-    height: calc((100vw - 300px) / 1.77);
     display: grid;
-    grid-template: 1fr 1fr/ 1fr 1fr;
     gap: 24px 30px;
     margin-bottom: 100px;
 
@@ -103,5 +101,61 @@
 
     .graphic {
         grid-area: 2 / 2 / span 1 / span 1;
+    }
+}
+
+.home {
+    height: calc((100vw - 300px) / 1.77);
+    grid-template: 1fr 1fr/ 1fr 1fr;
+}
+
+.web_design {
+    height: calc((100vw - 300px) / 3.5);
+    grid-template: 1fr/ 1fr 1fr;
+
+    .web {
+        display: none;
+    }
+
+    .app {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .graphic {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+}
+
+.app_design {
+    height: calc((100vw - 300px) / 3.5);
+    grid-template: 1fr/ 1fr 1fr;
+
+    .app {
+        display: none;
+    }
+
+    .web {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .graphic {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+}
+
+.graphic_design {
+    height: calc((100vw - 300px) / 3.5);
+    grid-template: 1fr/ 1fr 1fr;
+
+    .graphic {
+        display: none;
+    }
+
+    .web {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .app {
+        grid-area: 1 / 2 / span 1 / span 1;
     }
 }

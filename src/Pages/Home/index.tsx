@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import { Button, NavBoard } from '../../components';
+import { Button, NavBoard, Locations } from '../../components';
 
-const Home: React.FC = () => {
+type HomeType = {
+  handleChooseCategory: (newCategory: string) => void;
+}
+
+const Home: React.FC<HomeType> = ({handleChooseCategory}) => {
   return (
     <div className={styles.home_wrapper}>
       <div className={styles.home}>
@@ -10,11 +14,12 @@ const Home: React.FC = () => {
           <div className={styles.content}>
             <h1>Award-winning custom designs and digital branding solutions</h1>
             <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-            <Button/>
+            <Button text='Lern more'/>
           </div>
           <img src="./assets/home/desktop/image-hero-phone.png" alt="" />
         </div>
-        <NavBoard/>
+        <NavBoard handleChooseCategory={handleChooseCategory} className='home'/>
+        <Locations/>
       </div>
     </div>
   )
