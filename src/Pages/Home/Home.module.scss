@@ -46,5 +46,71 @@
                 }
             }
         }
+
+        .advantages {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+        
+            .advantage_box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 350px;
+        
+                .imd_box {
+                    position: relative;
+        
+                    .background {
+                        background-image: url(../../../public/assets/home/desktop/bg-pattern-hero-home.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: -1;
+                        transition: all 0.8s ease;
+        
+                        
+                    }
+        
+                    .passionate {
+                        transform: rotate(-0.25turn);
+                    }
+        
+                    .resourceful {
+                        transform: rotate(0.5turn);
+        
+                    }
+        
+                    &:hover .background {
+                        transform: rotate(0.25turn);
+                    }
+                }
+        
+                .text_box {
+                    text-align: center;
+        
+                    h4 {
+                        font-size: 20px;
+                        line-height: 26px;
+                        letter-spacing: 5px;
+                        font-weight: 500;
+                        margin: 25px 0;
+                    }
+        
+                    p {
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 400;
+                    }
+                }
+        
+        
+            }
+        }
     }
 }

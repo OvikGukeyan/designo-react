@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import Button from '../Button';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
     return (
@@ -10,12 +11,14 @@ const Footer: React.FC = () => {
                     <h3>Let’s talk about your project</h3>
                     <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                 </div>
-                <Button  text='GET IN TOUCH'/>
+                <Button text='GET IN TOUCH' />
             </div>
             <footer className={styles.footer}>
                 <div className={styles.footer_head}>
                     <div className={styles.logo}>
-                        <img src="./assets/shared/desktop/logo-light.png" alt="logo" />
+                        <Link to='/'>
+                            <img src="./assets/shared/desktop/logo-light.png" alt="logo" />
+                        </Link>
                     </div>
                     <nav className={styles.nav_wrapper}>
                         <ul>

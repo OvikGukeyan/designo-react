@@ -1,0 +1,72 @@
+.about_us_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .about_us {
+        width: calc(100% - 300px);
+
+        .board {
+            display: flex;
+            margin-bottom: 100px;
+            height: 480px;
+            border-radius: 15px;
+            overflow: hidden;
+
+            .title_text {
+                padding: 100px;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+
+
+
+
+                h1 {
+                    font-size: 48px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .title {
+            .title_text {
+                background-image: url(../../../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+                background-color: #E7816B;
+                color: #fff;
+            }
+        }
+
+        .talent {
+            .title_text {
+                background-color: #FDF3F0;
+                background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
+
+                h1 {
+                    color: #E7816B;
+                }
+
+            }
+        }
+
+        .deal {
+            flex-direction: row-reverse;
+
+            .title_text {
+                background-color: #FDF3F0;
+                background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
+            }
+
+
+            h1 {
+                color: #E7816B;
+            }
+        }
+    }
+}

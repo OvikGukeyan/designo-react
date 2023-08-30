@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import './App.css';
 import {Footer, Header} from './components';
-import { Home, Projects } from './Pages';
+import { AboutUs, Home, Projects } from './Pages';
 
 const App: React.FC = () => {
   const [category, setCategory] = useState<string | null>(null);
@@ -20,6 +20,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path='/' element={<Home handleChooseCategory={handleChooseCategory}/>}/>
         <Route path='/projects' element={<Projects category={category} handleChooseCategory={handleChooseCategory}/>}/>
+        <Route path='/about' element={<AboutUs/>}/>
       </Routes>
       
       <Footer/>
