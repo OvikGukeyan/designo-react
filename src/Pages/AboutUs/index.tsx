@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AboutUs.module.scss';
-import { Locations } from '../../components';
+import { LocationsNav } from '../../components';
 
 const AboutUs: React.FC = () => {
     return (
@@ -24,7 +24,7 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
 
-                <Locations/>
+                <LocationsNav/>
 
                 <div className={`${styles.board} ${styles.deal}`}>
                     <img src="./assets/about/desktop/image-real-deal.jpg" alt="" />

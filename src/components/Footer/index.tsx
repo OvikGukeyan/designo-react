@@ -22,9 +22,15 @@ const Footer: React.FC = () => {
                     </div>
                     <nav className={styles.nav_wrapper}>
                         <ul>
-                            <li>OUR COMPANY</li>
-                            <li>LOCATIONS</li>
-                            <li>CONTACT</li>
+                            <li>
+                                <Link to='/about'>OUR COMPANY</Link>
+                            </li>
+                            <li>
+                                <Link to='/locations'>LOCATIONS</Link>
+                            </li>
+                            <li>
+                                <Link to='contact'>CONTACT</Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>

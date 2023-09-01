@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import { Button, NavBoard, Locations } from '../../components';
+import { Button, NavBoard } from '../../components';
 
 type HomeType = {
   handleChooseCategory: (newCategory: string) => void;

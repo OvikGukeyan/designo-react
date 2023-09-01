@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Locations.module.scss';
+import styles from './LocationsNav.module.scss';
 
 
-const Locations: React.FC = () => {
+const LocationsNav: React.FC = () => {
     return (
         <div className={styles.locations}>
             <div className={styles.location_box}>
@@ -33,4 +33,4 @@ const Locations: React.FC = () => {
     )
 }
 
-export default Locations;
+export default LocationsNav;

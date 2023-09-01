@@ -1,0 +1,72 @@
+.locatons_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .locations {
+        width: calc(100% - 300px);
+        margin-bottom: 100px;
+
+        .location_item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+
+            .location_info {
+                width: 65%;
+                height: 325px;
+                background-color: #FDF3F0;
+                border-radius: 15px;
+                background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
+                background-position: bottom left;
+                background-repeat: no-repeat;
+                padding: 90px 100px;
+
+                h2 {
+                    color: #E7816B;
+                    font-size: 40px;
+                    line-height: 48px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+
+
+                .contacts {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    h5 {
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 400;
+                    }
+                    
+
+                }
+            }
+
+            .map {
+                width: 30%;
+                border-radius: 15px;
+                overflow: hidden;
+                transition: all 0.6s ease;
+                
+                &:hover {
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}
