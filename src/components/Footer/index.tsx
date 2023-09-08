@@ -1,18 +1,19 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import Button from '../Button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+    const location = useLocation()
     return (
         <div className={styles.footer_wrapper}>
-            <div className={styles.contact_board}>
+            {location.pathname !== '/contact' && <div className={styles.contact_board}>
                 <div className={styles.text_box}>
                     <h3>Let’s talk about your project</h3>
                     <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                 </div>
                 <Button text='GET IN TOUCH' />
-            </div>
+            </div>}
             <footer className={styles.footer}>
                 <div className={styles.footer_head}>
                     <div className={styles.logo}>

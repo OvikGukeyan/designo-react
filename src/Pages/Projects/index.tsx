@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Projects.module.scss';
 import { NavBoard } from '../../components';
+import axios from 'axios';
 
 type ProjectsType = {
     handleChooseCategory: (newCategory: string) => void;
@@ -8,6 +9,15 @@ type ProjectsType = {
 }
 
 const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) => {
+    const [projects, setProjects] = useState()
+
+    useEffect(()=>{
+        axios.get('https://64fa17ff4098a7f2fc156145.mockapi.io/designo')
+        .then(res => setProjects(res.data))
+    }, [])
+
+    console.log(projects)
+
     return (
         <div className={styles.projects_wrapper}>
             <div className={styles.projects}>
@@ -31,27 +41,15 @@ const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) =>
                         </p>
                     </div>}
                 <div className={styles.projects_items}>
-                    <div className={styles.item}>
-                        <img src="./assets/web-design/desktop/image-express.jpg" alt="" />
+                    {projects && projects.map((project)=> (
+                        <div className={styles.item}>
+                        <img src={project.imgUrl} alt="" />
                         <div className={styles.text}>
-                            <h5>EXPRESS</h5>
-                            <p>A multi-carrier shipping website for ecommerce businesses</p>
+                            <h5>{project.name}</h5>
+                            <p>{project.description}</p>
                         </div>
                     </div>
-                    <div className={styles.item}>
-                        <img src="./assets/web-design/desktop/image-express.jpg" alt="" />
-                        <div className={styles.text}>
-                            <h5>EXPRESS</h5>
-                            <p>A multi-carrier shipping website for ecommerce businesses</p>
-                        </div>
-                    </div>
-                    <div className={styles.item}>
-                        <img src="./assets/web-design/desktop/image-express.jpg" alt="" />
-                        <div className={styles.text}>
-                            <h5>EXPRESS</h5>
-                            <p>A multi-carrier shipping website for ecommerce businesses</p>
-                        </div>
-                    </div>
+                    ) )}
 
                 </div>
                 <NavBoard handleChooseCategory={handleChooseCategory} className={category ? category : 'home'} />
@@ -62,3 +60,6 @@ const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) =>
 }
 
 export default Projects;
+
+
+

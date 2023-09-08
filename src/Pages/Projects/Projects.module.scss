@@ -54,8 +54,8 @@
         .projects_items {
             width: 100%;
             display: grid;
-            grid-template: 480px / 1fr 1fr 1fr;
-            gap: 30px;
+            grid-template: 480px / 350px 350px 350px;
+            gap: 30px calc((100% - 1050px) / 2) ;
             margin-bottom: 100px;
 
 
@@ -78,6 +78,7 @@
                     align-items: center;
                     text-align: center;
                     background-color: #FDF3F0;
+                    padding: 0 20px;
 
                     h5 {
                         font-size: 20px;
@@ -86,6 +87,7 @@
                         font-weight: 500;
                         color: #E7816B;
                         margin: 25px 0;
+                        text-transform: uppercase;
                     }
 
                     p {
