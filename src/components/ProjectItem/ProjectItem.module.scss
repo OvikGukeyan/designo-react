@@ -1,0 +1,40 @@
+.item {
+    width: 350px;
+    height: 480px;
+    border-radius: 15px;
+    overflow: hidden;
+
+
+    img {
+        width: 350px;
+        height: 320px;
+    }
+
+    .text {
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #FDF3F0;
+        padding: 0 20px;
+
+        h5 {
+            font-size: 20px;
+            line-height: 26px;
+            letter-spacing: 5px;
+            font-weight: 500;
+            color: #E7816B;
+            margin: 25px 0;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Projects.module.scss';
-import { NavBoard } from '../../components';
+import { ItemLoader, NavBoard, ProjectItem } from '../../components';
 import axios from 'axios';
 
 type ProjectsType = {
@@ -8,15 +8,39 @@ type ProjectsType = {
     category: string | null;
 }
 
+export type ItemType = {
+    id: number
+    name: string
+    description: string
+    category: string
+    imgUrl: string
+}
+
 const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) => {
-    const [projects, setProjects] = useState()
+    const [projects, setProjects] = useState<ItemType[]>();
+    const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(()=>{
-        axios.get('https://64fa17ff4098a7f2fc156145.mockapi.io/designo')
-        .then(res => setProjects(res.data))
-    }, [])
 
-    console.log(projects)
+    useEffect(() => { (
+        async function () {
+            setIsLoading(true)
+            try {
+                const {data} = await axios.get(`https://64fa17ff4098a7f2fc156145.mockapi.io/designo?${category !== null ? `category=${category}` : ''}`)
+                setProjects(data)
+                setIsLoading(false)
+            }catch(error) {
+                console.log(error)
+                setIsLoading(false)
+            }
+        }
+    )();
+        // setIsLoading(true)
+        // axios.get(`https://64fa17ff4098a7f2fc156145.mockapi.io/designo?${category !== null ? `category=${category}` : ''}`)
+        //     .then(res => setProjects(res.data))
+        
+    }, [category])
+
+    console.log(projects, category)
 
     return (
         <div className={styles.projects_wrapper}>
@@ -41,15 +65,14 @@ const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) =>
                         </p>
                     </div>}
                 <div className={styles.projects_items}>
-                    {projects && projects.map((project)=> (
-                        <div className={styles.item}>
-                        <img src={project.imgUrl} alt="" />
-                        <div className={styles.text}>
-                            <h5>{project.name}</h5>
-                            <p>{project.description}</p>
-                        </div>
-                    </div>
-                    ) )}
+                    {!isLoading ? projects?.map((project) => (
+                        <ProjectItem project={project} />
+                    ))
+                        :
+                        [...Array(6)].map((i) => (
+                            <ItemLoader />
+                        ))
+                    }
 
                 </div>
                 <NavBoard handleChooseCategory={handleChooseCategory} className={category ? category : 'home'} />
