@@ -8,7 +8,6 @@ type HomeType = {
 
 const Home: React.FC<HomeType> = ({handleChooseCategory}) => {
   return (
-    <div className={styles.home_wrapper}>
       <div className={styles.home}>
         <div className={styles.board}>
           <div className={styles.content}>
@@ -52,7 +51,6 @@ const Home: React.FC<HomeType> = ({handleChooseCategory}) => {
             </div>
         </div>
       </div>
-    </div>
   )
 }
 

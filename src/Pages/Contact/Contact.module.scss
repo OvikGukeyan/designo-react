@@ -1,10 +1,7 @@
-.contact_wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+
 
     .contact {
-        width: calc(100% - 300px);
+        width: 100%;
 
         .board {
             width: 100%;
@@ -125,4 +122,3 @@
         }
 
     }
-}

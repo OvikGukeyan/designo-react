@@ -1,10 +1,7 @@
-.locatons_wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+
 
     .locations {
-        width: calc(100% - 300px);
+        width: 100%;
         margin-bottom: 100px;
 
         .location_item {
@@ -69,4 +66,3 @@
             flex-direction: row-reverse;
         }
     }
-}

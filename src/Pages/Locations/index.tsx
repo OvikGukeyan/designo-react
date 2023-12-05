@@ -4,7 +4,6 @@ import SimpleMap from './map';
 
 const Locations: React.FC = () => {
     return (
-        <div className={styles.locatons_wrapper}>
             <div className={styles.locations}>
                 <div className={styles.location_item}>
                     <div className={styles.location_info}>
@@ -67,7 +66,6 @@ const Locations: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 

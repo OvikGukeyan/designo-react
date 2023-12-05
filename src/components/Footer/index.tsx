@@ -7,13 +7,17 @@ const Footer: React.FC = () => {
     const location = useLocation()
     return (
         <div className={styles.footer_wrapper}>
-            {location.pathname !== '/contact' && <div className={styles.contact_board}>
-                <div className={styles.text_box}>
-                    <h3>Let’s talk about your project</h3>
-                    <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
+
+            {location.pathname !== '/contact' && <div className={styles.board_wrapper}>
+                <div className={styles.contact_board}>
+                    <div className={styles.text_box}>
+                        <h3>Let’s talk about your project</h3>
+                        <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
+                    </div>
+                    <Button text='GET IN TOUCH' />
                 </div>
-                <Button text='GET IN TOUCH' />
             </div>}
+            <div className={styles.footer_back}>
             <footer className={styles.footer}>
                 <div className={styles.footer_head}>
                     <div className={styles.logo}>
@@ -52,6 +56,8 @@ const Footer: React.FC = () => {
 
                 </div>
             </footer>
+            </div>
+            
         </div>
     )
 }

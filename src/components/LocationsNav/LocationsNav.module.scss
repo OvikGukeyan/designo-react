@@ -9,13 +9,15 @@
 
         text-decoration: none;
         color: #000;
+        width: 33.333%;
+
 
         .location_box {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 350px;
+            text-align: center;
 
             .imd_box {
                 position: relative;

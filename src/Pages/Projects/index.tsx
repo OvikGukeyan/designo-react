@@ -43,7 +43,6 @@ const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) =>
     console.log(projects, category)
 
     return (
-        <div className={styles.projects_wrapper}>
             <div className={styles.projects}>
                 {category === 'web_design' &&
                     <div className={`${styles.title_board} ${styles[category ? category : '']}`}>
@@ -78,7 +77,6 @@ const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) =>
                 <NavBoard handleChooseCategory={handleChooseCategory} className={category ? category : 'home'} />
             </div>
 
-        </div>
     )
 }
 

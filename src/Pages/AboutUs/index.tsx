@@ -4,7 +4,6 @@ import { LocationsNav } from '../../components';
 
 const AboutUs: React.FC = () => {
     return (
-        <div className={styles.about_us_wrapper}>
             <div className={styles.about_us}>
                 <div className={`${styles.board} ${styles.title}`}>
                     <div className={styles.title_text}>
@@ -36,7 +35,6 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 

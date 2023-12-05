@@ -1,10 +1,7 @@
-.about_us_wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+
 
     .about_us {
-        width: calc(100% - 300px);
+        width: 100%;
 
         .board {
             display: flex;
@@ -69,4 +66,3 @@
             }
         }
     }
-}

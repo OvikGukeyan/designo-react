@@ -12,7 +12,6 @@ const Contact: React.FC = () => {
 
 
     return (
-        <div className={styles.contact_wrapper}>
             <div className={styles.contact}>
                 <div className={styles.board}>
                     <div className={styles.text}>
@@ -77,7 +76,6 @@ const Contact: React.FC = () => {
                 </div>
                 <LocationsNav />
             </div>
-        </div>
     )
 }
 
