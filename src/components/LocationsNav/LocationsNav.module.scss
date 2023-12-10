@@ -70,4 +70,13 @@
 
         }
     }
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        margin-bottom: 50px;
+
+        a {
+            margin-bottom: 50px;
+        }
+    }
 }

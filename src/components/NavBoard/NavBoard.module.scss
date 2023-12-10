@@ -22,6 +22,8 @@
         z-index: 1;
         cursor: pointer;
         transition: all 0.6s ease;
+        text-align: center;
+
 
 
 
@@ -102,6 +104,8 @@
     .graphic {
         grid-area: 2 / 2 / span 1 / span 1;
     }
+
+
 }
 
 .home {
@@ -157,4 +161,83 @@
     .app {
         grid-area: 1 / 2 / span 1 / span 1;
     }
+}
+
+@media (max-width: 1000px) {
+    .nav_board {
+        grid-template: 1fr 1fr 1fr / 1fr;
+
+        .web {
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+
+        .app {
+            grid-area: 2 / 1 / span 1 / span 1;
+        }
+
+        .graphic {
+            grid-area: 3 / 1 / span 1 / span 1;
+        }
+    }
+
+    .web_design,
+    .app_design,
+    .graphic_design {
+        grid-template: 1fr 1fr / 1fr;
+    }
+
+    .home {
+        height: 650px;
+    }
+
+    .web_design {
+        height: 425px;
+
+        .web {
+            display: none;
+        }
+    
+        .app {
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+    
+        .graphic {
+            grid-area: 2 / 1 / span 1 / span 1;
+        }
+    }
+
+    .app_design {
+        height: 425px;
+       
+    
+        .app {
+            display: none;
+        }
+    
+        .web {
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+    
+        .graphic {
+            grid-area: 2 / 1 / span 1 / span 1;
+        }
+    }
+    
+    .graphic_design {
+        height: 425px;
+    
+        .graphic {
+            display: none;
+        }
+    
+        .web {
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+    
+        .app {
+            grid-area: 2 / 1 / span 1 / span 1;
+        }
+    }
+    
+
 }

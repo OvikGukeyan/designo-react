@@ -6,12 +6,16 @@
         .board {
             display: flex;
             margin-bottom: 100px;
-            height: 480px;
             border-radius: 15px;
             overflow: hidden;
 
+            .img {
+                min-width: 476px;
+                height: 100%;
+            }
+
             .title_text {
-                padding: 100px;
+                padding: 7%;
                 background-repeat: no-repeat;
                 background-position: right bottom;
 
@@ -33,6 +37,13 @@
         }
 
         .title {
+            height: 480px;
+            flex-direction: row-reverse;
+
+            .img {
+                background-image: url(../../../public/assets/about/desktop/image-about-hero.jpg);
+            }
+
             .title_text {
                 background-image: url(../../../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
                 background-color: #E7816B;
@@ -41,6 +52,12 @@
         }
 
         .talent {
+            height: 640px;
+
+            .img {
+                background-image: url(../../../public/assets/about/desktop/image-world-class-talent.jpg);
+            }
+
             .title_text {
                 background-color: #FDF3F0;
                 background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
@@ -54,6 +71,11 @@
 
         .deal {
             flex-direction: row-reverse;
+            height: 640px;
+
+            .img {
+                background-image: url(../../../public/assets/about/desktop/image-real-deal.jpg);
+            }
 
             .title_text {
                 background-color: #FDF3F0;
@@ -63,6 +85,41 @@
 
             h1 {
                 color: #E7816B;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .board {
+                flex-direction: column;
+                height: auto;
+
+                .img {
+                    height: calc((100vw - 100px) / 2.153);
+                    width: 100%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .title {
+                .img {
+                    background-image: url(../../../public/assets/about/tablet/image-about-hero.jpg);
+                    
+                }
+            }
+
+            .talent {
+                .img {
+                    background-image: url(../../../public/assets/about/tablet/image-world-class-talent.jpg);
+                    
+                }
+            }
+
+            .deal {
+                .img {
+                    background-image: url(../../../public/assets/about/tablet/image-real-deal.jpg);
+                    
+                }
             }
         }
     }
