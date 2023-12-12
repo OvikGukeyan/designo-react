@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   return (
     <header className={styles.header_wrapper}>
-        <div className={styles.header}>
           <div className={styles.logo}>
             <Link to='/'>
               <img src="./assets/shared/desktop/logo-dark.png" alt="logo" />
@@ -24,7 +23,6 @@ const Header: React.FC = () => {
               </li>
             </ul>
           </nav>
-      </div>
 
     </header>
   )

@@ -18,7 +18,7 @@
                 background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
                 background-position: bottom left;
                 background-repeat: no-repeat;
-                padding: 90px 100px;
+                padding: 90px 7%;
 
                 h2 {
                     color: #E7816B;
@@ -64,5 +64,22 @@
 
         .reverse {
             flex-direction: row-reverse;
+        }
+
+        @media (max-width: 1000px) {
+            
+            .location_item {
+                flex-direction: column;
+                margin-bottom: 80px;
+                .location_info {
+                    width: 100%;
+                    padding: 90px 15%;
+                    margin-bottom: 30px;
+                }
+
+                .map {
+                    width: 100%;
+                }
+            }
         }
     }

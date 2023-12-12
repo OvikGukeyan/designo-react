@@ -1,4 +1,5 @@
-.home {
+.home_wrapper {
+    padding: 0 50px;
     width: 100%;
 
     .board {
@@ -13,7 +14,7 @@
         overflow: hidden;
         margin-bottom: 100px;
 
-        
+
 
         img {
             margin: 0 -50px -240px -70px;
@@ -43,77 +44,86 @@
         }
     }
 
-    .advantages {
+    .home {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 100px;
 
-        .advantage_box {
+
+
+        .advantages {
+            width: 100%;
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 350px;
-            margin: 0 15px 0 0;
-             
-            &:last-child {
-                margin-right: 0;
+            margin-bottom: 100px;
+
+            .advantage_box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 350px;
+                margin: 0 15px 0 0;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .imd_box {
+                    position: relative;
+
+                    .background {
+                        background-image: url(../../../public/assets/home/desktop/bg-pattern-hero-home.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: -1;
+                        transition: all 0.8s ease;
+
+
+                    }
+
+                    .passionate {
+                        transform: rotate(-0.25turn);
+                    }
+
+                    .resourceful {
+                        transform: rotate(0.5turn);
+
+                    }
+
+                    &:hover .background {
+                        transform: rotate(0.25turn);
+                    }
+                }
+
+                .text_box {
+                    text-align: center;
+
+                    h4 {
+                        font-size: 23px;
+                        line-height: 26px;
+                        letter-spacing: 5px;
+                        font-weight: 500;
+                        margin: 25px 0;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        line-height: 26px;
+                        font-weight: 400;
+                    }
+                }
+
+
             }
-
-            .imd_box {
-                position: relative;
-
-                .background {
-                    background-image: url(../../../public/assets/home/desktop/bg-pattern-hero-home.svg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    z-index: -1;
-                    transition: all 0.8s ease;
-
-
-                }
-
-                .passionate {
-                    transform: rotate(-0.25turn);
-                }
-
-                .resourceful {
-                    transform: rotate(0.5turn);
-
-                }
-
-                &:hover .background {
-                    transform: rotate(0.25turn);
-                }
-            }
-
-            .text_box {
-                text-align: center;
-
-                h4 {
-                    font-size: 23px;
-                    line-height: 26px;
-                    letter-spacing: 5px;
-                    font-weight: 500;
-                    margin: 25px 0;
-                }
-
-                p {
-                    font-size: 20px;
-                    line-height: 26px;
-                    font-weight: 400;
-                }
-            }
-
-
         }
-    }
 
+       
+       
+
+    }
     @media (max-width: 1000px) {
         .board {
             flex-direction: column;
@@ -126,41 +136,52 @@
             .content {
                 text-align: center;
                 align-items: center;
-                margin: 70px 0 0 0 ;
+                margin: 70px 0 0 0;
 
                 h1 {
                     margin-bottom: 30px;
                 }
 
                 p {
-                    margin-bottom: 15px;
+                    margin-bottom: 30px;
                 }
             }
         }
-
-        .advantages {
-            flex-direction: column;
-            .advantage_box {
-                width: 100%;
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 0 0 30px 0;
-
-                .imd_box {
-                    margin-right: 50px;
-                }
-
-                .text_box {
-                    text-align: left;
+        .home {
+            .advantages {
+                flex-direction: column;
+    
+                .advantage_box {
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 0 0 30px 0;
+    
+                    .imd_box {
+                        margin-right: 50px;
+                    }
+    
+                    .text_box {
+                        text-align: left;
+                    }
                 }
             }
         }
-
         
-    }
 
-    @media (max-width: 1000px) {
 
     }
-   
+
+    @media (max-width: 767px) {
+        padding: 0;
+
+        .board {
+            border-radius: 0;
+        }
+
+        .home {
+            padding: 0 25px;
+        }
+    }
+
 }

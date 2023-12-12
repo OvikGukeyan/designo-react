@@ -1,18 +1,12 @@
-.header_wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 160px;
 
-
-
-    .header {
+    header {
         padding: 0 50px;
         max-width: 1200px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 160px;
 
        
 
@@ -69,8 +63,14 @@
             }
         }
 
-        
+        @media (max-width: 767px) {
+            padding: 0 25px;
+
+            .nav_wrapper {
+                display: none;
+            }
+
+        }
     }
+    
 
-
-}

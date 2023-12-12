@@ -70,8 +70,8 @@ const Contact: React.FC = () => {
                                 </div>}
                             </div>
                         </form>
-
-                        <Button text='submit' />
+                        <div className={styles.button_box}><Button text='submit' /></div>
+                        
                     </div>
                 </div>
                 <LocationsNav />
