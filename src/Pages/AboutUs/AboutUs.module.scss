@@ -1,125 +1,146 @@
+.about_us {
+    width: 100%;
+    padding: 0 50px;
+
+    .board {
+        display: flex;
+        margin-bottom: 100px;
+        border-radius: 15px;
+        overflow: hidden;
+
+        .img {
+            min-width: 476px;
+            height: 100%;
+        }
+
+        .title_text {
+            padding: 7%;
+            background-repeat: no-repeat;
+            background-position: right bottom;
 
 
-    .about_us {
-        width: 100%;
 
+
+            h1 {
+                font-size: 48px;
+                font-weight: 500;
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .title {
+        height: 480px;
+        flex-direction: row-reverse;
+
+        .img {
+            background-image: url(../../../public/assets/about/desktop/image-about-hero.jpg);
+        }
+
+        .title_text {
+            background-image: url(../../../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+            background-color: #E7816B;
+            color: #fff;
+        }
+    }
+
+    .talent {
+        height: 640px;
+
+        .img {
+            background-image: url(../../../public/assets/about/desktop/image-world-class-talent.jpg);
+        }
+
+        .title_text {
+            background-color: #FDF3F0;
+            background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
+
+            h1 {
+                color: #E7816B;
+            }
+
+        }
+    }
+
+    .deal {
+        flex-direction: row-reverse;
+        height: 640px;
+
+        .img {
+            background-image: url(../../../public/assets/about/desktop/image-real-deal.jpg);
+        }
+
+        .title_text {
+            background-color: #FDF3F0;
+            background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
+        }
+
+
+        h1 {
+            color: #E7816B;
+        }
+    }
+
+    @media (max-width: 1000px) {
         .board {
-            display: flex;
-            margin-bottom: 100px;
-            border-radius: 15px;
-            overflow: hidden;
+            flex-direction: column;
+            height: auto;
 
             .img {
-                min-width: 476px;
-                height: 100%;
+                height: calc((100vw - 100px) / 2.153);
+                width: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
             }
 
             .title_text {
-                padding: 7%;
-                background-repeat: no-repeat;
-                background-position: right bottom;
+                padding: 80px 20px;
 
-
-
-
-                h1 {
-                    font-size: 48px;
-                    font-weight: 500;
-                    margin-bottom: 30px;
-                }
-
-                p {
-                    font-size: 16px;
-                    line-height: 26px;
-                    font-weight: 400;
-                }
             }
         }
 
         .title {
-            height: 480px;
-            flex-direction: row-reverse;
-
             .img {
-                background-image: url(../../../public/assets/about/desktop/image-about-hero.jpg);
-            }
+                background-image: url(../../../public/assets/about/tablet/image-about-hero.jpg);
 
-            .title_text {
-                background-image: url(../../../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
-                background-color: #E7816B;
-                color: #fff;
             }
         }
 
         .talent {
-            height: 640px;
-
             .img {
-                background-image: url(../../../public/assets/about/desktop/image-world-class-talent.jpg);
-            }
-
-            .title_text {
-                background-color: #FDF3F0;
-                background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
-
-                h1 {
-                    color: #E7816B;
-                }
+                background-image: url(../../../public/assets/about/tablet/image-world-class-talent.jpg);
 
             }
         }
 
         .deal {
-            flex-direction: row-reverse;
-            height: 640px;
-
             .img {
-                background-image: url(../../../public/assets/about/desktop/image-real-deal.jpg);
-            }
+                background-image: url(../../../public/assets/about/tablet/image-real-deal.jpg);
 
-            .title_text {
-                background-color: #FDF3F0;
-                background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
-            }
-
-
-            h1 {
-                color: #E7816B;
-            }
-        }
-
-        @media (max-width: 1000px) {
-            .board {
-                flex-direction: column;
-                height: auto;
-
-                .img {
-                    height: calc((100vw - 100px) / 2.153);
-                    width: 100%;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
-            }
-
-            .title {
-                .img {
-                    background-image: url(../../../public/assets/about/tablet/image-about-hero.jpg);
-                    
-                }
-            }
-
-            .talent {
-                .img {
-                    background-image: url(../../../public/assets/about/tablet/image-world-class-talent.jpg);
-                    
-                }
-            }
-
-            .deal {
-                .img {
-                    background-image: url(../../../public/assets/about/tablet/image-real-deal.jpg);
-                    
-                }
             }
         }
     }
+
+    @media (max-width: 767px) {
+        padding: 0;
+
+        .board {
+            border-radius: 0;
+            text-align: center;
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+
+            .img {
+                height: calc(100vw / 2.153);
+            }
+        }
+    }
+}

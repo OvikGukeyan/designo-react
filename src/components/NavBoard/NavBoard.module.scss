@@ -196,11 +196,11 @@
         .web {
             display: none;
         }
-    
+
         .app {
             grid-area: 1 / 1 / span 1 / span 1;
         }
-    
+
         .graphic {
             grid-area: 2 / 1 / span 1 / span 1;
         }
@@ -208,36 +208,42 @@
 
     .app_design {
         height: 425px;
-       
-    
+
+
         .app {
             display: none;
         }
-    
+
         .web {
             grid-area: 1 / 1 / span 1 / span 1;
         }
-    
+
         .graphic {
             grid-area: 2 / 1 / span 1 / span 1;
         }
     }
-    
+
     .graphic_design {
         height: 425px;
-    
+
         .graphic {
             display: none;
         }
-    
+
         .web {
             grid-area: 1 / 1 / span 1 / span 1;
         }
-    
+
         .app {
             grid-area: 2 / 1 / span 1 / span 1;
         }
     }
-    
 
+}
+
+@media (max-width: 767px) {
+    .nav_board {
+        height: 800px;
+    };
+    
 }
