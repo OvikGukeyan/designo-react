@@ -2,6 +2,7 @@
 
     .contact {
         width: 100%;
+        padding: 0 50px;
 
         .board {
             width: 100%;
@@ -57,7 +58,7 @@
 
                             border: none;
                             border-bottom: 1px solid #fff;
-                            background-color: #E7816B;
+                            background: transparent;
                             color: #fff;
                             height: 40px;
                             width: 100%;
@@ -139,6 +140,21 @@
 
                 .form_box {
                     width: 100%;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding: 0;
+
+            .board {
+                border-radius: 0;
+                text-align: center;
+
+                .form_box {
+                    .button_box {
+                        justify-content: center;
+                    }
                 }
             }
         }
