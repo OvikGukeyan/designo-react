@@ -1,77 +1,122 @@
+.header_wrapper {
+    padding: 0 50px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    margin: 0 auto;
 
-    header {
-        padding: 0 50px;
-        max-width: 1200px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 160px;
-        margin: 0 auto;
 
-       
-
-        .logo {
-            img {
-                width: 200px;
-                cursor: pointer;
-            }
+    .logo {
+        img {
+            width: 200px;
+            cursor: pointer;
         }
+    }
 
-        .nav_wrapper {
-            ul {
-                width: 370px;
-                display: flex;
-                justify-content: space-between;
-                padding: 0;
+    .nav_wrapper {
+        ul {
+            width: 370px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
 
-                li {
-                    list-style-type: none;
-                    cursor: pointer;
-                    letter-spacing: 2px;
-                    position: relative;
-                    line-height: 16px;
-                    transition: all .6s;
+            li {
+                list-style-type: none;
+                cursor: pointer;
+                letter-spacing: 2px;
+                position: relative;
+                line-height: 16px;
+                transition: all .6s;
 
-                    a {
-                        text-decoration: none;
-                        color: #000;
-                    }
-
-                    &:after {
-                        position: absolute;
-                        content: "";
-                        width: 0;
-                        height: 1px;
-                        background: black;
-                        bottom: 0;
-                        right: 0;
-                        left: 0;
-                        transition: all .6s;
-                    }
-
-                    &:hover {
-                        font-size: 17px;
-
-                        &:after {
-                            width: 100%;
-                        }
-                    }
-
-
+                a {
+                    text-decoration: none;
+                    color: #000;
                 }
 
-            }
-        }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 1px;
+                    background: black;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    transition: all .6s;
+                }
 
-        @media (max-width: 767px) {
-            padding: 0 25px;
+                &:hover {
+                    font-size: 17px;
 
-            .nav_wrapper {
-                display: none;
+                    &:after {
+                        width: 100%;
+                    }
+                }
+
+
             }
 
         }
     }
-    
 
+    .hamburger_box {
+        display: none;
+    }
+
+    .nav_bar_mobile_wrapper {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+
+        .nav_bar_mobile {
+            background-color: #000;
+            height: 235px;
+            padding: 35px;
+            z-index: 500;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+
+
+                li {
+                    font-size: 26px;
+                    letter-spacing: 2px;
+                    line-height: 25px;
+                    list-style-type: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 0 25px;
+        height: 100px;
+
+        .nav_wrapper {
+            display: none;
+        }
+
+        .hamburger_box {
+            display: block;
+        }
+
+        .nav_bar_mobile_wrapper {
+            display: block;
+        }
+
+    }
+
+
+}

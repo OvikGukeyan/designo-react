@@ -1,115 +1,154 @@
+.locations {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 0 50px;
+
+    .location_item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
 
 
-    .locations {
-        width: 100%;
-        margin-bottom: 100px;
-        padding: 0 50px;
 
-        .location_item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
+        .location_info {
+            width: 65%;
+            height: 325px;
+            background-color: #FDF3F0;
+            border-radius: 15px;
+            background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            padding: 90px 7%;
+
+            h2 {
+                color: #E7816B;
+                font-size: 40px;
+                line-height: 48px;
+                font-weight: 500;
+                margin-bottom: 30px;
+            }
 
 
-            .location_info {
-                width: 65%;
-                height: 325px;
-                background-color: #FDF3F0;
-                border-radius: 15px;
-                background-image: url(../../../public/assets/shared/desktop/bg-pattern-two-circles.svg);
-                background-position: bottom left;
-                background-repeat: no-repeat;
-                padding: 90px 7%;
+            .contacts {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
 
-                h2 {
-                    color: #E7816B;
-                    font-size: 40px;
-                    line-height: 48px;
-                    font-weight: 500;
-                    margin-bottom: 30px;
+                h5 {
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 400;
                 }
 
 
+            }
+        }
+
+        .map {
+            width: 30%;
+            height: 326px;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.6s ease;
+            background-size: cover;
+            background-position: right;
+
+
+
+            &:hover {
+                border-radius: 5px;
+            }
+        }
+
+        .canada {
+            background-image: url(../../../public/assets/locations/desktop/image-map-canada.png);
+        }
+
+        .australia {
+            background-image: url(../../../public/assets/locations/desktop/image-map-australia.png);
+
+        }
+
+        .britain {
+            background-image: url(../../../public/assets/locations/desktop/image-map-united-kingdom.png);
+
+        }
+
+
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    @media (max-width: 1000px) {
+
+        .location_item {
+            flex-direction: column;
+            margin-bottom: 80px;
+            flex-direction: column-reverse;
+
+            .location_info {
+                width: 100%;
+                padding: 90px 15%;
+                margin-bottom: 30px;
+            }
+
+            .map {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .canada {
+                background-image: url(../../../public/assets/locations/tablet/image-map-canada.png);
+            }
+
+            .australia {
+                background-image: url(../../../public/assets/locations/tablet/image-map-australia.png);
+
+            }
+
+            .britain {
+                background-image: url(../../../public/assets/locations/tablet/image-map-uk.png);
+
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
+
+        .location_item {
+            .location_info {
+                height: 400px;
+                text-align: center;
+                border-radius: 0;
+                margin: 0;
+                padding: 60px 7%;
+
                 .contacts {
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: center;
 
-                    h5 {
-                        font-size: 16px;
-                        line-height: 26px;
-                        font-weight: 700;
+                    div {
+                        &:first-child {
+                            margin-bottom: 20px;
+                        }
                     }
-
-                    p {
-                        font-size: 16px;
-                        line-height: 26px;
-                        font-weight: 400;
-                    }
-                    
-
                 }
             }
 
             .map {
-                width: 30%;
-                border-radius: 15px;
-                overflow: hidden;
-                transition: all 0.6s ease;
-                
-                &:hover {
-                    border-radius: 5px;
-                }
-            }
-        }
-
-        .reverse {
-            flex-direction: row-reverse;
-        }
-
-        @media (max-width: 1000px) {
-            
-            .location_item {
-                flex-direction: column;
-                margin-bottom: 80px;
-                flex-direction: column-reverse;
-                .location_info {
-                    width: 100%;
-                    padding: 90px 15%;
-                    margin-bottom: 30px;
-                }
-
-                .map {
-                    width: 100%;
-                }
-            }
-        }
-
-        @media (max-width: 767px) {
-            padding: 0;
-
-            .location_item {
-                .location_info {
-                    height: 400px;
-                    text-align: center;
-                    border-radius: 0;
-                    margin: 0;
-                    padding: 60px 7%;
-                    .contacts {
-                        flex-direction: column;
-                        align-items: center;
-
-                        div {
-                            &:first-child {
-                                margin-bottom: 20px;
-                            }
-                        }
-                    }
-                }
-
-                .map {
-                    border-radius: 0;
-                }
+                border-radius: 0;
+                margin-bottom: 0;
+                height: 320px;
             }
         }
     }
+}

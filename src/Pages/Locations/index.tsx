@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Locations.module.scss';
-import SimpleMap from './map';
 
 const Locations: React.FC = () => {
     return (
@@ -21,8 +20,7 @@ const Locations: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.map}>
-                        <SimpleMap center={{ lat: 43.718371, lng: -79.5428677 }} />
+                    <div className={`${styles.map} ${styles.canada}`}>
                     </div>
                 </div>
                 <div className={`${styles.location_item} ${styles.reverse}`}>
@@ -41,8 +39,7 @@ const Locations: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.map}>
-                        <SimpleMap center={{ lat: -33.8851098 , lng: 151.2140435, }} />
+                    <div className={`${styles.map} ${styles.australia}`}>
                     </div>
                 </div>
                 <div className={styles.location_item}>
@@ -61,8 +58,7 @@ const Locations: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.map}>
-                        <SimpleMap center={{ lat: 51.5286416, lng: -0.1015987 }} />
+                    <div className={`${styles.map} ${styles.britain}`}>
                     </div>
                 </div>
             </div>
