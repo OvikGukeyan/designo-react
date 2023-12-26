@@ -5,13 +5,16 @@ import { Footer, Header } from './components';
 import { AboutUs, Contact, Home, Locations, Projects } from './Pages';
 
 const App: React.FC = () => {
-  const [category, setCategory] = useState<string | null>(null);
   const navigate = useNavigate();
+
 
   const handleChooseCategory = (newCategory: string) => {
     navigate('/projects');
-    setCategory(newCategory);
-    window.scroll(0, 0)
+
+    const json = JSON.stringify(newCategory);
+    localStorage.setItem('category', json);
+
+    window.scroll(0, 0);
   }
 
   return (
@@ -20,7 +23,7 @@ const App: React.FC = () => {
       <div className='wrapper'>
         <Routes>
           <Route path='/' element={<Home handleChooseCategory={handleChooseCategory} />} />
-          <Route path='/projects' element={<Projects category={category} handleChooseCategory={handleChooseCategory} />} />
+          <Route path='/projects' element={<Projects handleChooseCategory={handleChooseCategory} />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/locations' element={<Locations />} />
           <Route path='/contact' element={<Contact />} />

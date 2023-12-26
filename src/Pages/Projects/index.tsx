@@ -5,7 +5,6 @@ import axios from 'axios';
 
 type ProjectsType = {
     handleChooseCategory: (newCategory: string) => void;
-    category: string | null;
 }
 
 export type ItemType = {
@@ -16,10 +15,13 @@ export type ItemType = {
     imgUrl: string
 }
 
-const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) => {
+const Projects: React.FC<ProjectsType> = ({ handleChooseCategory }) => {
+
     const [projects, setProjects] = useState<ItemType[]>();
     const [isLoading, setIsLoading] = useState(false);
 
+    const data = localStorage.getItem('category');
+    const category = data ? JSON.parse(data) : null;
 
     useEffect(() => {
         (
@@ -35,13 +37,7 @@ const Projects: React.FC<ProjectsType> = ({ handleChooseCategory, category }) =>
                 }
             }
         )();
-        // setIsLoading(true)
-        // axios.get(`https://64fa17ff4098a7f2fc156145.mockapi.io/designo?${category !== null ? `category=${category}` : ''}`)
-        //     .then(res => setProjects(res.data))
-
     }, [category])
-
-    console.log(projects, category)
 
     return (
         <div className={styles.projects}>
